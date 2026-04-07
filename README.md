@@ -1,4 +1,4 @@
-# machine-electrique-3
+# Machine-electrique-3
 # Étude et Simulation de Bobinage des Machines Alternatives Monophasées
 
 Cette plateforme pédagogique interactive est dédiée à l'analyse approfondie, au dimensionnement analytique et à la modélisation tridimensionnelle des systèmes d'enroulements pour machines électriques monophasées.
