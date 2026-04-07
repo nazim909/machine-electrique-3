@@ -1,33 +1,58 @@
 # machine-electrique-3
-# Plateforme Pédagogique : Simulation du Bobinage des Machines Monophasées
+# Étude et Simulation de Bobinage des Machines Alternatives Monophasées
 
-Cette plateforme est une application web interactive dédiée à l'étude, au dimensionnement analytique et à la simulation tridimensionnelle des bobinages pour machines alternatives monophasées.
+Cette plateforme pédagogique interactive est dédiée à l'analyse approfondie, au dimensionnement analytique et à la modélisation tridimensionnelle des systèmes d'enroulements pour machines électriques monophasées.
 
-Lien d'accès direct : [https://nazim909.github.io/machine-electrique-3/](https://nazim909.github.io/machine-electrique-3/)
+**[Accéder à la plateforme de simulation](https://nazim909.github.io/machine-electrique-3/)**
 
 ---
 
-## Fonctionnalités Principales
+## Présentation du Projet
 
-- **Modélisation Tridimensionnelle** : Visualisation volumique du stator et du cheminement des conducteurs en temps réel via la bibliothèque Three.js.
-- **Calculateur de Dimensionnement** : Automatisation des calculs des paramètres électromagnétiques (pas polaire, nombre de spires, coefficients de distribution $K_d$ et de raccourcissement $K_p$).
-- **Module de Diagnostic** : Système d'analyse permettant de détecter les erreurs de configuration et d'assurer la symétrie du bobinage.
-- **Génération de Rapports Techniques** : Exportation automatisée des caractéristiques de la machine au format PDF pour une exploitation industrielle ou académique.
+L'objectif de ce projet est de combler le fossé entre la théorie électrotechnique complexe et la réalisation pratique des machines. La plateforme permet de visualiser l'impact des paramètres de conception sur la géométrie réelle du stator et la qualité du champ magnétique produit.
+
+### Problématique traitée
+Contrairement aux machines triphasées, les machines monophasées ne produisent pas naturellement un champ tournant. Ce projet simule la mise en place d'un **enroulement auxiliaire** et d'un dispositif de déphasage pour générer un champ tournant artificiel, conformément au **théorème de LeBlanc**.
+
+---
+
+## Fonctionnalités Avancées
+
+### 1. Module de Dimensionnement Analytique
+Calcul automatique des paramètres fondamentaux basés sur les entrées utilisateurs (Puissance, pôles, encoches) :
+- Détermination du **pas polaire** ($Y_p = Q / 2p$).
+- Calcul du nombre de spires par phase.
+- Évaluation des coefficients de qualité : Facteur de distribution ($K_d$), de raccourcissement ($K_p$) et d'inclinaison ($K_i$).
+
+### 2. Moteur de Simulation Multi-vues
+- **Vue 2D Panoramique** : Représentation linéaire développée du cheminement des câbles (styles hexagonal et rectangulaire).
+- **Vue en Coupe (Top View)** : Visualisation radiale des entrées/sorties de courant et de la polarité magnétique (N/S).
+- **Modélisation 3D (Three.js)** : Rendu volumique interactif permettant une inspection à 360° du squelette du stator et de l'assemblage des bobines.
+
+### 3. Système de Diagnostic Intelligent
+Un algorithme intégré analyse la répartition des zones (Phase Principale vs Phase Auxiliaire) en respectant la loi des 1/3 - 2/3. Il détecte en temps réel :
+- Les asymétries de bobinage.
+- Les erreurs de pas polaire.
+- Les chevauchements interdits en mode simple couche.
+
+### 4. Rapports d'Ingénierie
+Génération automatisée de **plaques signalétiques** et de rapports techniques au format PDF via la bibliothèque **jsPDF**, incluant la nomenclature des matériaux et les limites opérationnelles (Classe thermique, IP55, etc.).
+
+---
 
 ## Spécifications Techniques
 
-- **Langages** : HTML5, CSS3 (Architecture Dark Mode), JavaScript (ES6+).
-- **Moteur Graphique** : Three.js (WebGL) pour le rendu du stator.
-- **Moteur Mathématique** : MathJax pour le rendu vectoriel des équations de l'électrotechnique.
-- **Traitement de Données** : jsPDF pour la structure des rapports dynamiques.
-
-## Contexte Académique
-
-Ce projet s'inscrit dans le cadre du cursus de 2ème année au sein du **Département d'Électrotechnique** de l'**École Nationale Polytechnique (ENP Alger)**.
-
-**Supervision** : M. K. BOUGHRARA.
+- **Core Logic** : JavaScript (ES6+).
+- **Graphismes 3D** : Three.js (WebGL).
+- **Rendu Mathématique** : MathJax (LaTeX).
+- **Interface** : HTML5 / CSS3 avec architecture responsive pour l'accès sur stations de travail et mobiles.
 
 ---
 
-**Auteur** : Mohamed Nazim ABBAD
-*Département d'Électrotechnique - École Nationale Polytechnique*
+## Contexte Académique
+
+Projet réalisé au sein de l'**École Nationale Polytechnique (ENP Alger)**.
+- **Département** : Électrotechnique (2ème année).
+- **Superviseur** : M. K. BOUGHRARA.
+
+**Développeur Principal** : Mohamed Nazim ABBAD
